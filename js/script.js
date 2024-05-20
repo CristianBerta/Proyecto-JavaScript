@@ -1,56 +1,101 @@
-//Creo variables globales que muy posiblemente se utilicen
+//Creo las variables globales
+let tarifaPorHora = 20000;
+let tarifaPorFoto = 5000;
+let tarifaTallerPdf = 2500;
+let tarifaTallerPresencial = 5000;
+let tarifaCursoPdf = 15000;
+let tarifaCursoPresencial = 30000;
+let costo;
+let horas;
+let cantFotos;
+let modalidad;
+let servicio;
 let nombre;
-let usuario;
-let contrasenia;
 
-nombre = prompt("Ingrese su nombre:"); //Asigno el nombre del usuario
-
-alert("Bienvenido " + nombre + " a Internet.SA");
-
-//Primera opcion de Menu
-let num1 = parseInt(prompt("Ingrese 1 si ya es cliente\
-\nIngrese 2 si no es cliente"));
-
-//Segun la opcion ingresada 
-switch (num1) {
-    case 1:
-        usuario = prompt("Ingrese su usuario");
-        contrasenia = prompt("Ingrese su contraseña");
-        break;
-    case 2:
-        alert("Desea hacerse cliente?");
-        break;
-    default:
-        alert("Ingrese una opcion valida!!");
-        break;
+//Funcion para cotizar dos de los servicios y guardar el costo total
+function cotizadorEventoYBooK(horas, cantFotos) {
+    let costoHora = tarifaPorHora * horas; //Calculo el costo por horas
+    let costoFoto = tarifaPorFoto * cantFotos; //Calculo el costo por fotos
+    costo = costoHora + costoFoto; //Obtengo el costo total
+    return costo;
 }
 
-let num2 = alert("En que podemos ayudarte hoy?\
-\nIngrese 1 si desea saber precios sobre el servicio internet\
-\nIngrese 2 si desea saber precios sobre el servicio de cable\
-\nIngrese 3 si desea conocer el estado de su cuenta\
-\nIngrese 4 si desea dar de baja el servicio");
-
-switch (num2) {
-    case 1:
-        alert("Contamos con 3 servicios de Internet\
-        \n50Megas por $10000\
-        \n100Megas por $20000\
-        \n150Megas por $30000");
-        break;
-    case 2:
-        alert("Contamos con 3 servicios de Cable\
-        \nClassic por $10000\
-        \nPremiun por $20000\
-        \nGold por $30000");
-        break;
-    case 3:
-        alert("Su cuenta no presenta deudas");
-        break;
-    case 4:
-        alert("Lamentamos que quieras dar de baja el servicio, pronto nos comunicaremos con usted");
-        break;
-    default:
-        alert("Ingrese una opcion valida!!")
-        break;
+//Funcion para obtener el nombre del usuario y guardarlo
+function pedirNombre() {
+    nombre = prompt("Ingrese su nombre:");
+    return nombre;
 }
+
+//Funcion principal de la pagina
+function menu() {
+    
+    //Primera parte de la funcion, se obtiene el nombre del usuario
+    nombre = pedirNombre();
+    alert("Bienvenido " + nombre + " a TheStranger PH");
+    
+    //Segunda parte de la funcion, se ejecuta el menu utilizando el ciclo dowhile
+    //para repetir el mismo en caso de que se ingrese una opcion no valida
+    do {
+        //Se muestra al usuario las opciones
+        servicio = parseInt(prompt("Ingrese el numero del tipo de servicio que esta buscando:\
+        \n1 Evento Social\
+        \n2 Book Fotografico\
+        \n3 Curso de Fotografia\
+        \n4 Taller de Fotografia\
+        \n5 Salir"));
+
+        //Con el ciclo switch se analiza la opcion ingresada por el usuario
+        switch (servicio) {
+            
+            //En la opcion 1 y 2 se pide los datos para aplicar la funcion que cotiza el servicio
+            case 1:
+                horas = parseInt(prompt("Ingrese la cantidad de horas que pretende del servicio:"));
+                cantFotos = parseInt(prompt("Ingrese la cantidad de fotos que desea:"))
+                alert("El costo total del servicio es de $" + cotizadorEventoYBooK(horas, cantFotos));
+                break;
+            case 2:
+                horas = parseInt(prompt("Ingrese la cantidad de horas que pretende del servicio:"));
+                cantFotos = parseInt(prompt("Ingrese la cantidad de fotos que desea:"))
+                alert("El costo total del servicio es de $" + cotizadorEventoYBooK(horas, cantFotos));
+                break;
+            
+            //En la opcion 3 y 4 se vuelven a mostrar opciones y a utilizar switch
+            case 3:
+                modalidad = parseInt(prompt("En que formato te gustaria el Curso:\n1 pdf\n2 presencial"));
+                    switch (modalidad) {
+                        case 1:
+                            alert("El costo del Curso en formato pdf es de $" + tarifaTallerPdf);
+                            break;
+                        case 2:
+                            alert("El costo del Curso de manera presencial es de $" + tarifaTallerPresencial);
+                            break;
+                        default:
+                            alert("Ingrese una opcion valida");
+                            break;
+                    }
+                break;
+            case 4:
+                modalidad = parseInt(prompt("En que formato te gustaria el Taller:\n1 pdf\n2 presencial"));
+                    switch (modalidad) {
+                        case 1:
+                            alert("El costo del Taller en formato pdf es de $" + tarifaTallerPdf);
+                            break;
+                        case 2:
+                            alert("El costo del Taller de manera presencial es de $" + tarifaTallerPresencial);
+                            break;
+                        default:
+                            alert("Ingrese una opcion valida");
+                            break;
+                    }
+                break;
+            case 5:
+                alert("Gracias por tu visita " + nombre);
+                break;
+            default:
+                alert("Ingrese una opcion valida");
+        }
+    } while (servicio !== 5); //Condicion para que se repita el menu
+}
+
+//Ejecuto la funcion principal
+menu();
