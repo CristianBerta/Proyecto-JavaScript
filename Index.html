@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es-AR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,47 +8,60 @@
     <link rel="icon" href="img/icon.ico">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <h1>Bienvenido, registrese para una mejor atencion</h1>
-    <form id="registro">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" required><br>
-        <label for="email">Email:</label>
-        <input type="text" id="email" required><br>
-        <button onclick="registrarCliente()">Registrarse</button>
-    </form>
 
-    <h1>Menu</h1>
-    <ul id="menu">
-        <li><button onclick="menu(1)">Evento Social</button></li>
-        <li><button onclick="menu(2)">Book Fotografico</button></li>
-        <li><button onclick="menu(3)">Curso de Fotografia</button></li>
-        <li><button onclick="menu(4)">Taller de Fotrografia</button></li>
-        <li><button onclick="menu(5)">Salir</button></li>
-    </ul>
+<body>
+    <div id="registro">
+        <h1>Bienvenido, registrese para una mejor atencion</h1>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre"><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email"><br>
+        <button onclick="registrarCliente()">Registrarse</button>
+    </div>
+
+    <div id="menu" style="display: none;">
+        <h1>TheStranger PH</h1>
+        <h2>Menu</h2>
+        <button onclick="menu(1)">Evento Social</button><br>
+        <button onclick="menu(2)">Book Fotografico</button><br>
+        <button onclick="menu(3)">Curso de Fotografia</button><br>
+        <button onclick="menu(4)">Taller de Fotrografia</button><br>
+        <button onclick="menu(5)">Salir</button>
+    </div>
 
     <div id="presupuesto" style="display: none;">
+        <h1>TheStranger PH</h1>
         <h2>Presupuesto</h2>
         <label for="cantidadHoras">Cantidad de horas:</label>
         <input type="number" id="cantidadHoras"><br>
         <label for="cantidadFotos">Cantidad de fotos:</label>
         <input type="number" id="cantidadFotos"><br>
-        <button onclick="calcularPresupuesto()">Calcular Presupuesto</button>
+        <button onclick="cotizadorEventoYBooK()">Calcular Presupuesto</button>
     </div>
 
-    <div id="cursoYtaller" style="display: none;">
+    <div id="curso" style="display: none;">
+        <h1>TheStranger PH</h1>
         <h2>Costo</h2>
-        <button onclick="pdf()">Pdf</button>
-        <button onclick="presencial()">Presencial</button>
+        <button onclick="cursoPdf()">Pdf</button>
+        <button onclick="cursoPresencial()">Presencial</button>
+    </div>
+
+    <div id="taller" style="display: none;">
+        <h1>TheStranger PH</h1>
+        <h2>Costo</h2>
+        <button onclick="tallerPdf()">Pdf</button>
+        <button onclick="tallerPresencial()">Presencial</button>
     </div>
 
     <div id="resultado" style="display:none;">
+        <h1>TheStranger PH</h1>
         <h2>Resultado</h2>
         <p id="mensaje"></p>
         <button onclick="volverAlMenu()">Volver al Menú</button>
         <button onclick="salir()">Salir</button>
     </div>
-
-    <script src="js/index.js"></script>
 </body>
+
+<script src="js/index.js" defer></script>
+
 </html>
