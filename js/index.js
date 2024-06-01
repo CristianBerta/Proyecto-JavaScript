@@ -12,7 +12,7 @@ let nombre;
 let email;
 let clientes = [];
 
-//Funcion para cotizar dos de los servicios y guardar el costo total
+//Funcion para cotizar los servicios y guardar el costo total
 function cotizadorEventoYBooK() {
     horas = document.getElementById('cantidadHoras').value;
     cantFotos = document.getElementById('cantidadFotos').value;
@@ -28,6 +28,7 @@ function registrarCliente() {
     email = document.getElementById('email').value;
     if (nombre && email) {
         clientes.push({ nombre, email });
+        console.log(clientes);
         document.getElementById('registro').style.display = 'none';
         document.getElementById('menu').style.display = 'block';
     } else {
