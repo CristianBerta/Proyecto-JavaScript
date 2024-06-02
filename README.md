@@ -1,2 +1,1 @@
-En esta primera entrega trato de ejecutar un clasico "Menu de Opciones", donde el usuario deba ingresar un numero para realizar determinada acciones,
-ya sea para obtener los precios o para cotizar algunos de los servicios ofrecidos.
+En esta segunda entrega, a lo ya realizado en la entrega anterior, le agrego DOM para lograr mas interaccion con el usuario y como concecuencia de ello se modificaron y se crearon nuevas funciones. Ademas, se agrego un array para guardar clientes.
