@@ -4,34 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TheStranger PH</title>
+    <title>Cristian Alejandro PH</title>
     <link rel="icon" href="img/icon.ico">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header id="header"></header>
+    <header>
+        <img src="img/logo.jpg" alt="logo">
+        <nav>
+            <a href="index.html">Menu Principal</a>
+            <a href="productos.html">Productos</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
 
-    <main id="contactoMenu" class="contactoMenu">
-        <!-- <div class="container"> -->
-            <h1>Contacto</h1>
-            <form id="contactoForm">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="consulta">Dejame tu consulta:</label>
-                <textarea id="consulta" name="consulta" rows="4" required></textarea>
-                
-                <button type="submit">Enviar</button>
-            </form>
-            <p id="respuestaMsj"></p>
-        </div>
-    </main>
+    <h1>Contacto</h1>
+    <div class="container">
+        <form id="contactoForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="consulta">Dejame tu consulta:</label>
+            <textarea id="consulta" name="consulta" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="respuestaMsj"></p>
+    </div>
 
     <footer></footer>
 
     <script src="js/global.js" defer></script>
-    <script src="js/navegacion.js" defer></script>
     <script src="js/contacto.js" defer></script>
 
 </body>

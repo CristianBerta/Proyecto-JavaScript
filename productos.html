@@ -4,28 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TheStranger PH</title>
+    <title>Cristian Alejandro PH</title>
     <link rel="icon" href="img/icon.ico">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header id="header"></header>
+    <header>
+        <img src="img/logo.jpg" alt="logo">
+        <nav>
+            <a href="index.html">Menu Principal</a>
+            <a href="productos.html">Productos</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
 
-    <main>
-        <h1>Galeria de Fotografias</h1>
-        <div id="galeria"></div>
-        <div class="line"></div>
-        <h2>Carrito de Compras</h2>
-        <div id="cart"></div>
-    </main>
-    
-    <footer></footer>
-    
-    <script src="js/global.js" defer></script>
-    <script src="js/navegacion.js" defer></script>
-    <script src="js/productos.js" defer></script>
-    
+    <h1>Carrito de Compras</h1>
+    <div id="foto-container">
+        <img id="foto" src="img/img1.jpg" alt="Fotografía">
+    </div>
+
+    <div id="botones">
+        <button id="prev">Prev</button>
+        <button id="next">Next</button>
+        <button id="agregarCarrito">Comprar</button>
+    </div>
+
+    <div id="carrito">
+        <h2>Carrito</h2>
+        <ul id="fotografiasCarrito"></ul>
+        <p><strong>Total:</strong> $<span id="totalCarrito">0</span></p>
+    </div>
+
+    <script src="js/global.js"></script>
+    <script src="js/productos.js"></script>
 </body>
-
-</html>
