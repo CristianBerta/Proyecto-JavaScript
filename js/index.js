@@ -27,12 +27,7 @@ function volverAlMenu() {
     document.getElementById('menu').style.display = 'block';
 }
 function salir() {
-    document.getElementById('resultado').style.display = 'none';
-    document.getElementById('menu').style.display = 'none';
-    document.getElementById('registro').style.display = 'block';
-    document.getElementById('nombre').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('cantidad').value = '';
+    window.location.href = 'registro.html'
 }
 //----------------------------------------------------------------------
 
@@ -60,7 +55,7 @@ function tallerPresencial() {
 }
 //----------------------------------------------------------------------
 
-//Funcion principal de la pagina
+//Funcion del Menu Principal
 function menu(opcion) {
     switch (opcion) {
         //En la opcion 1 y 2 se cotiza un servicio
