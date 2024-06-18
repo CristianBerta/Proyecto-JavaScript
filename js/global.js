@@ -10,4 +10,6 @@ let horas;
 let cantFotos;
 let nombre;
 let email;
-let clientes = [];
+let password;
+const clientes = [];
+const carrito = [];

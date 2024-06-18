@@ -8,49 +8,48 @@ const fotografias = [
     {src:'img/img7.jpg', precio: 11000}
 ];
 
-let currentIndex = 0;
-const carrito = [];
+let index = 0;
 
-const photoElement = document.getElementById('foto');
-const prevButton = document.getElementById('prev');
-const nextButton = document.getElementById('next');
-const addToCartButton = document.getElementById('agregarCarrito');
-const cartItemsElement = document.getElementById('fotografiasCarrito');
-const cartTotalElement = document.getElementById('totalCarrito');
+const variableFoto = document.getElementById('foto');
+const botonAnterior = document.getElementById('ant');
+const botonSiguiente = document.getElementById('sig');
+const botonAgregarCarrito = document.getElementById('agregarCarrito');
+const productosCarrito = document.getElementById('fotografiasCarrito');
+const carritoTotal = document.getElementById('totalCarrito');
 
-prevButton.addEventListener('click', () => {
-    currentIndex = (currentIndex === 0) ? fotografias.length - 1 : currentIndex - 1;
-    updatePhoto();
+botonAnterior.addEventListener('click', () => {
+    index = (index === 0) ? fotografias.length - 1 : index - 1;
+    cargarFoto();
 });
 
-nextButton.addEventListener('click', () => {
-    currentIndex = (currentIndex === fotografias.length - 1) ? 0 : currentIndex + 1;
-    updatePhoto();
+botonSiguiente.addEventListener('click', () => {
+    index = (index === fotografias.length - 1) ? 0 : index + 1;
+    cargarFoto();
 });
 
-addToCartButton.addEventListener('click', () => {
-    const photoSrc = fotografias[currentIndex];
-    carrito.push(photoSrc);
-    updateCart();
+botonAgregarCarrito.addEventListener('click', () => {
+    const fotoSrc = fotografias[index];
+    carrito.push(fotoSrc);
+    cargarCarrito();
 });
 
-function updatePhoto() {
-    const foto = fotografias[currentIndex];
-    photoElement.src = foto.src;
+function cargarFoto() {
+    const foto = fotografias[index];
+    variableFoto.src = foto.src;
 }
 
-function updateCart() {
-    cartItemsElement.innerHTML = '';
+function cargarCarrito() {
+    productosCarrito.innerHTML = '';
     let total = 0;
 
     carrito.forEach((item, index) => {
         const li = document.createElement('li');
         li.textContent = `Fotografía ${index + 1}: $${item.precio}`;
-        cartItemsElement.appendChild(li);
+        productosCarrito.appendChild(li);
         total += item.precio;
     });
 
-    cartTotalElement.textContent = total;
+    carritoTotal.textContent = total;
 }
 
-updatePhoto();
+cargarFoto();
