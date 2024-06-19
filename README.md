@@ -1,1 +1,1 @@
-En esta segunda entrega, a lo ya realizado en la entrega anterior, le agrego DOM para lograr mas interaccion con el usuario y como concecuencia de ello se modificaron y se crearon nuevas funciones. Ademas, se agrego un array para guardar clientes.
+En esta tercera entrega, a lo ya realizado en la entrega anterior, le agrego Eventos, Storege y Json. Como concecuencia de ello, la pagina se modifico y ahora cuenta con un registro y un login, su menu principal, un carrito y un formulario para consultas de los usuarios.
