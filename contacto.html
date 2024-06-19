@@ -10,32 +10,28 @@
 </head>
 
 <body>
-    <header>
-        <img src="img/logo.jpg" alt="logo">
-        <nav>
-            <a href="index.html">Menu Principal</a>
-            <a href="productos.html">Productos</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-    </header>
+    <header id="header"></header>
 
-    <h1>Contacto</h1>
-    <div class="container">
-        <form id="contactoForm">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+    <main>
+        <h1>Contacto</h1>
+        <div class="container">
+            <form id="contactoForm">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="consulta">Dejame tu consulta:</label>
-            <textarea id="consulta" name="consulta" rows="4" required></textarea>
+                <label for="consulta">Dejame tu consulta:</label>
+                <textarea id="consulta" name="consulta" rows="4" required></textarea>
 
-            <button type="submit">Enviar</button>
-        </form>
-        <p id="respuestaMsj"></p>
-    </div>
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="respuestaMsj"></p>
+        </div>
+    </main>
 
-    <footer></footer>
+    <footer id="footer"></footer>
 
     <script src="js/global.js" defer></script>
+    <script src="js/navegacion.js" defer></script>
     <script src="js/contacto.js" defer></script>
 
 </body>

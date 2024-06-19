@@ -10,32 +10,30 @@
 </head>
 
 <body>
-    <header>
-        <img src="img/logo.jpg" alt="logo">
-        <nav>
-            <a href="index.html">Menu Principal</a>
-            <a href="productos.html">Productos</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-    </header>
+    <header id="header"></header>
 
-    <h1>Carrito de Compras</h1>
-    <div id="foto-container">
-        <img id="foto" src="img/img1.jpg" alt="Fotografía">
-    </div>
+    <main>
+        <h1>Carrito de Compras</h1>
+        <div id="foto-container">
+            <img id="foto" src="img/img1.jpg" alt="Fotografía">
+        </div>
 
-    <div id="botones">
-        <button id="ant">Anterior</button>
-        <button id="sig">Siguiente</button>
-        <button id="agregarCarrito">Comprar</button>
-    </div>
+        <div id="botones">
+            <button id="ant">Anterior</button>
+            <button id="sig">Siguiente</button>
+            <button id="agregarCarrito">Comprar</button>
+        </div>
 
-    <div id="carrito">
-        <h2>Carrito</h2>
-        <ul id="fotografiasCarrito"></ul>
-        <p><strong>Total:</strong> $<span id="totalCarrito">0</span></p>
-    </div>
+        <div id="carrito">
+            <h2>Carrito</h2>
+            <ul id="fotografiasCarrito"></ul>
+            <p><strong>Total:</strong> $<span id="totalCarrito">0</span></p>
+        </div>
+    </main>
+
+    <footer id="footer"></footer>
 
     <script src="js/global.js" defer></script>
+    <script src="js/navegacion.js" defer></script>
     <script src="js/productos.js" defer></script>
 </body>

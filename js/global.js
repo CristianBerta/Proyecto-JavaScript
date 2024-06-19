@@ -1,4 +1,15 @@
-//Variables globales
+//Variables Globales
+const header = document.getElementById('header');
+const img = document.createElement('img');
+const nav = document.createElement('nav');
+const a = document.createElement('a');
+const links = ["Menu", "Productos", "Contacto"];
+
+const footer = document.getElementById('footer');
+const parrafoFooter = document.createElement('p');
+const TIME = new Date().getFullYear();
+
+
 const TARIFAPORHORA = 20000;
 const TARIFAPORFOTO = 5000;
 const TARIFATALLERPDF = 2500;

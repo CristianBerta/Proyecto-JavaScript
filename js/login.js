@@ -6,7 +6,7 @@ document.getElementById('inicioSesion').addEventListener('submit', function(e) {
     const usuario = clientesRecuperados.find((elemento) => elemento.email === email && elemento.password === password);
     console.log(usuario);
     if (usuario) {
-        window.location.href = 'index.html';
+        window.location.href = 'menu.html';
     } else {
         document.getElementById('errorMsj').textContent = 'Email o Contraseña incorrecta';
     }
