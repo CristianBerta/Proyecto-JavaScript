@@ -9,6 +9,12 @@ body {
     min-height: 100vh;
 }
 
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 header {
     background-color: #333;
     color: #fff;
@@ -68,16 +74,15 @@ a {
     margin: 20px auto;
     width: 90%;
     max-width: 600px;
-    border: 2px solid #ddd;
-    display: flex;
+    display: inline-block;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
 }
 
 #foto {
     width: 100%;
     height: auto;
+    border: 2px solid #ddd;
 }
 
 #botones {
@@ -104,13 +109,6 @@ button {
 #fotografiasCarrito li {
     list-style: none;
     margin: 10px 0;
-}
-
-.container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 form {

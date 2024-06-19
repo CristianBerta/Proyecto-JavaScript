@@ -1,16 +1,17 @@
 const fotografias = [
-    {src:'img/img1.jpg', precio: 5000},
-    {src:'img/img2.jpg', precio: 6000},
-    {src:'img/img3.jpg', precio: 7000},
-    {src:'img/img4.jpg', precio: 8000},
-    {src:'img/img5.jpg', precio: 9000},
-    {src:'img/img6.jpg', precio: 10000},
-    {src:'img/img7.jpg', precio: 11000}
+    {src:'img/img1.jpg', precio: 5000, nombre: 'Fotografia 1'},
+    {src:'img/img2.jpg', precio: 6000, nombre: 'Fotografia 2'},
+    {src:'img/img3.jpg', precio: 7000, nombre: 'Fotografia 3'},
+    {src:'img/img4.jpg', precio: 8000, nombre: 'Fotografia 4'},
+    {src:'img/img5.jpg', precio: 9000, nombre: 'Fotografia 5'},
+    {src:'img/img6.jpg', precio: 10000, nombre: 'Fotografia 6'},
+    {src:'img/img7.jpg', precio: 11000, nombre: 'Fotografia 7'}
 ];
 
 let index = 0;
 
 const variableFoto = document.getElementById('foto');
+const nombreFoto = document.getElementById('nombreFoto')
 const botonAnterior = document.getElementById('ant');
 const botonSiguiente = document.getElementById('sig');
 const botonAgregarCarrito = document.getElementById('agregarCarrito');
@@ -36,6 +37,7 @@ botonAgregarCarrito.addEventListener('click', () => {
 function cargarFoto() {
     const foto = fotografias[index];
     variableFoto.src = foto.src;
+    nombreFoto.textContent = foto.nombre;
 }
 
 function cargarCarrito() {
@@ -44,7 +46,7 @@ function cargarCarrito() {
 
     carrito.forEach((item, index) => {
         const li = document.createElement('li');
-        li.textContent = `Fotografía ${index + 1}: $${item.precio}`;
+        li.textContent = `Producto ${index + 1}: ${item.nombre} $${item.precio}`;
         productosCarrito.appendChild(li);
         total += item.precio;
     });
