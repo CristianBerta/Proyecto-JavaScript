@@ -27,7 +27,7 @@ function volverAlMenu() {
     document.getElementById('menu').style.display = 'block';
 }
 function salir() {
-    window.location.href = 'registro.html'
+    window.location.href = 'login.html'
 }
 //----------------------------------------------------------------------
 

@@ -24,7 +24,7 @@ header {
     align-items: center;
 }
 
-header img{
+header img {
     height: 55px;
     margin-left: 10px;
     width: 100px;
@@ -86,11 +86,25 @@ a {
     border: 2px solid #ddd;
 }
 
-#botones {
-    margin: 20px;
+#ant {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+    background-color: rgba(0- 0, 0, 0);
 }
 
-button {
+#sig {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 523px;
+    background-color: rgba(0- 0, 0, 0);
+}
+
+#agregarCarrito {
     padding: 10px 20px;
     margin: 0 10px;
     font-size: 16px;
@@ -122,7 +136,8 @@ label {
     margin-bottom: 5px;
 }
 
-input, textarea {
+input,
+textarea {
     margin-bottom: 15px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -134,4 +149,47 @@ input, textarea {
     margin-top: 10px;
     text-align: center;
     color: black;
+}
+
+#registro,
+#login,
+.container {
+    width: 100%;
+    max-width: 360px;
+    padding: 15px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#menu,
+#presupuesto,
+#curso,
+#taller,
+#resultado {
+    width: 100%;
+    max-width: 360px;
+    padding: 100px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#imagenR,
+#imagenI {
+    height: 120px;
+    margin-left: 10px;
+    width: 100px;
+}
+
+#botonIngresar,
+#botonRegistro {
+    width: 100%;
+}
+
+#textoSesion,
+#botonRegistrarse {
+    font-size: x-small;
 }

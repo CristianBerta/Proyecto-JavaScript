@@ -1,3 +1,7 @@
+document.getElementById('botonRegistrarse').addEventListener('click', () => {
+    window.location.href = 'registro.html';
+})
+
 document.getElementById('inicioSesion').addEventListener('submit', function(e) {
     e.preventDefault();
     email = document.getElementById('loginEmail').value;
@@ -8,6 +12,12 @@ document.getElementById('inicioSesion').addEventListener('submit', function(e) {
     if (usuario) {
         window.location.href = 'menu.html';
     } else {
-        document.getElementById('errorMsj').textContent = 'Email o Contraseña incorrecta';
+        document.getElementById('botonIngresar').addEventListener('click', () => {
+            Swal.fire({
+                title: "Usuario Incorrecto",
+                text: "Email o Contraseña incorrectas",
+                icon: "error"
+            });
+        })
     }
 });
