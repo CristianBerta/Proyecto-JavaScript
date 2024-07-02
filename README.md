@@ -1,1 +1,1 @@
-En esta tercera entrega, a lo ya realizado en la entrega anterior, le agrego Eventos, Storege y Json. Como concecuencia de ello, la pagina se modifico y ahora cuenta con un registro y un login, su menu principal, un carrito y un formulario para consultas de los usuarios.
+Finalmente la entrega final se completa aplicando las librerias 'Sweetalert2', en en login y en el formulario de contacto, y 'Granim', en en toda la pagina web. Ademas se usaron asincronias y promesas en el login para simular una comunicacion con el servidor. Y por ultimo,

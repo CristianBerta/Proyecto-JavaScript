@@ -1,13 +1,13 @@
-//Libreria Granim
+//Granim
 var granimInstance = new Granim({
     element: '#canvas-image-blending',
     direction: 'top-bottom',
     isPausedWhenNotInView: true,
-    image : {
+    image: {
         source: 'img/imgFondo.jpg',
         blendingMode: 'saturation',
     },
-    states : {
+    states: {
         "default-state": {
             gradients: [
                 ['#29323c', '#485563'],
@@ -15,24 +15,27 @@ var granimInstance = new Granim({
                 ['#80d3fe', '#7ea0c4'],
                 ['#f0ab51', '#eceba3']
             ],
-            transitionSpeed: 4000
+            transitionSpeed: 3000
         }
     }
 });
 
-document.getElementById('contactoForm').addEventListener('submit', function (event) {
-    event.preventDefault();
+document.getElementById('contactoForm').addEventListener('submit', function (e) {
+    e.preventDefault();
 
     email = document.getElementById('email').value;
     const comentario = document.getElementById('consulta').value;
 
-    document.getElementById('botonEnviar').addEventListener('click', () => {
-        Swal.fire({
-            title: "Gracias por tu consulta",
-            text: "Me pondre en contacto contigo pronto",
-            icon: "success"
-        });
+    //Sweetalert2
+    Swal.fire({
+        title: "Gracias por tu consulta",
+        text: "Me pondre en contacto contigo pronto",
+        icon: "success"
     })
 
     document.getElementById('contactoForm').reset();
+});
+
+const boton = document.getElementById('botonEnviar');
+boton.addEventListener('click', function () {
 });

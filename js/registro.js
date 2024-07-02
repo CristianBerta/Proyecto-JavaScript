@@ -1,4 +1,4 @@
-//Libreria Granim
+//Granim
 var granimInstance = new Granim({
     element: '#canvas-image-blending',
     direction: 'top-bottom',
@@ -15,7 +15,7 @@ var granimInstance = new Granim({
                 ['#80d3fe', '#7ea0c4'],
                 ['#f0ab51', '#eceba3']
             ],
-            transitionSpeed: 4000
+            transitionSpeed: 3000
         }
     }
 });
@@ -29,4 +29,3 @@ document.getElementById('registroForm').addEventListener('submit', function (e) 
     document.getElementById('registroMsj').textContent = 'Gracias por registrarte';
     window.location.href = 'login.html';
 });
-

@@ -1,4 +1,4 @@
-//Libreria Granim
+//Granim
 var granimInstance = new Granim({
     element: '#canvas-image-blending',
     direction: 'top-bottom',
@@ -15,7 +15,7 @@ var granimInstance = new Granim({
                 ['#80d3fe', '#7ea0c4'],
                 ['#f0ab51', '#eceba3']
             ],
-            transitionSpeed: 4000
+            transitionSpeed: 3000
         }
     }
 });
@@ -33,7 +33,7 @@ const fotografias = [
 let index = 0;
 
 const variableFoto = document.getElementById('foto');
-const nombreFoto = document.getElementById('nombreFoto')
+const nombreFoto = document.getElementById('nombreFoto');
 const botonAnterior = document.getElementById('ant');
 const botonSiguiente = document.getElementById('sig');
 const botonAgregarCarrito = document.getElementById('agregarCarrito');

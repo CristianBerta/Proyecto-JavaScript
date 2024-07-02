@@ -1,4 +1,4 @@
-//Libreria Granim
+//Granim
 var granimInstance = new Granim({
     element: '#canvas-image-blending',
     direction: 'top-bottom',
@@ -15,7 +15,7 @@ var granimInstance = new Granim({
                 ['#80d3fe', '#7ea0c4'],
                 ['#f0ab51', '#eceba3']
             ],
-            transitionSpeed: 4000
+            transitionSpeed: 3000
         }
     }
 });
@@ -54,7 +54,7 @@ function salir() {
 //----------------------------------------------------------------------
 
 //----------------------------------------------------------------------
-//funciones para imprimir los costos de los cursos y los talleres
+//Funciones para imprimir los costos de los cursos y los talleres
 function cursoPdf() {
     document.getElementById('curso').style.display = 'none';
     document.getElementById('resultado').style.display = 'block';
