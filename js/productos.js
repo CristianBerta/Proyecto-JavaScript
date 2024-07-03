@@ -3,11 +3,11 @@ var granimInstance = new Granim({
     element: '#canvas-image-blending',
     direction: 'top-bottom',
     isPausedWhenNotInView: true,
-    image : {
+    image: {
         source: 'img/imgFondo.jpg',
         blendingMode: 'saturation',
     },
-    states : {
+    states: {
         "default-state": {
             gradients: [
                 ['#29323c', '#485563'],
@@ -20,16 +20,7 @@ var granimInstance = new Granim({
     }
 });
 
-const fotografias = [
-    {src:'img/img1.jpg', precio: 5000, nombre: 'Fotografia 1'},
-    {src:'img/img2.jpg', precio: 6000, nombre: 'Fotografia 2'},
-    {src:'img/img3.jpg', precio: 7000, nombre: 'Fotografia 3'},
-    {src:'img/img4.jpg', precio: 8000, nombre: 'Fotografia 4'},
-    {src:'img/img5.jpg', precio: 9000, nombre: 'Fotografia 5'},
-    {src:'img/img6.jpg', precio: 10000, nombre: 'Fotografia 6'},
-    {src:'img/img7.jpg', precio: 11000, nombre: 'Fotografia 7'}
-];
-
+let fotografias = [];
 let index = 0;
 
 const variableFoto = document.getElementById('foto');
@@ -57,9 +48,11 @@ botonAgregarCarrito.addEventListener('click', () => {
 });
 
 function cargarFoto() {
-    const foto = fotografias[index];
-    variableFoto.src = foto.src;
-    nombreFoto.textContent = foto.nombre;
+    if (fotografias.length > 0) {
+        const foto = fotografias[index];
+        variableFoto.src = foto.src;
+        nombreFoto.textContent = foto.nombre;
+    }
 }
 
 function cargarCarrito() {
@@ -76,4 +69,9 @@ function cargarCarrito() {
     carritoTotal.textContent = total;
 }
 
-cargarFoto();
+fetch('js/fotografias.json')
+    .then(res => res.json())
+    .then(foto => {
+        fotografias = foto;
+        cargarFoto();
+    });
