@@ -21,10 +21,12 @@ body {
     z-index: -1;
 }
 
-#menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#menu button {
+    width: 20%;
+    padding: 2.5%;
+    font-size: 1em;
+    margin-top: 40px;
+    background-color: gainsboro;
 }
 
 header {
@@ -65,10 +67,10 @@ main {
 
 footer {
     background-color: #c2c2c2;
-    text-align: center;
     position: relative;
     bottom: 0;
     width: 100%;
+    position: absolute;
 }
 
 footer p {
@@ -83,7 +85,7 @@ a {
     font-size: 18px;
 }
 
-#menuProductos{
+#menuProductos {
     display: flex;
 }
 
@@ -95,8 +97,9 @@ a {
     align-items: center;
 }
 
-#carrito{
+#carrito {
     width: 25%;
+    height: 26rem;
 }
 
 #foto {
@@ -182,7 +185,7 @@ textarea {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#menu,
+/* #menu,
 #presupuesto,
 #curso,
 #taller,
@@ -194,7 +197,7 @@ textarea {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+} */
 
 #imagenR,
 #imagenI {
