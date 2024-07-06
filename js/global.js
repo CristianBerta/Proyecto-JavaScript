@@ -1,5 +1,5 @@
 //Variables Globales
-const header = document.getElementById('header');
+const header = document.querySelector('header');
 const img = document.createElement('img');
 const nav = document.createElement('nav');
 const a = document.createElement('a');

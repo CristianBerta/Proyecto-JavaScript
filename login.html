@@ -13,19 +13,17 @@
 <body>
     <canvas id="canvas-image-blending"></canvas>
 
-    <header>
-        <img src="img/logo.jpg" alt="logo">
-    </header>
+    <header></header>
 
     <main>
         <div id="login">
             <img id="imagenI" src="img/icon.ico" alt="icon">
             <h2>Inicio de Sesion</h2>
             <form id="inicioSesion">
-                <label for="email">Email:</label>
-                <input type="email" id="loginEmail" name="email" required><br>
+                <label for="loginEmail">Email:</label>
+                <input type="email" id="loginEmail" name="email" autocomplete="email" required><br>
 
-                <label for="password">Contraseña:</label>
+                <label for="loginPassword">Contraseña:</label>
                 <input type="password" id="loginPassword" name="password" required><br>
 
                 <button id="botonIngresar" type="submit">Ingresar</button>
